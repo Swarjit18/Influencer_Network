@@ -1,0 +1,102 @@
+* { box-sizing: border-box; }
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+}
+.container {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+    width: 100%;
+    max-width: 650px;
+}
+h1 {
+    text-align: center;
+    background: linear-gradient(to right, #ff0844 0%, #ffb199 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 0;
+    font-size: 2.2em;
+}
+.menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.menu-item {
+    background: #f8f9fa;
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border-left: 6px solid;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Forces the text to align to the left */
+}
+
+/* Update the Exit button to maintain its centered position but keep the text left-aligned */
+.menu-item:nth-child(5) { 
+    border-left-color: #8E2DE2; 
+    grid-column: span 2; 
+    justify-self: center; 
+    width: calc(50% - 5px); 
+    /* Remove justify-content: center from here so it inherits the left alignment */
+}
+.input-area {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+input {
+    flex-grow: 1;
+    padding: 12px 20px;
+    border: 2px solid #e2e8f0;
+    border-radius: 30px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+input:focus { border-color: #764ba2; }
+button {
+    background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 0.3s, transform 0.1s;
+    box-shadow: 0 4px 15px rgba(79, 172, 254, 0.4);
+}
+button:hover { opacity: 0.9; }
+button:active { transform: scale(0.95); }
+.output-container {
+    background-color: #1e1e2f;
+    border-radius: 15px;
+    padding: 15px;
+    height: 250px;
+    overflow-y: auto;
+    border: 2px solid #3b82f6;
+    box-shadow: inset 0 5px 10px rgba(0,0,0,0.5);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    line-height: 1.5;
+}
+.log-line { margin: 5px 0; }
+.c-user { color: #facc15; } 
+.c-system { color: #c084fc; } 
+.c-success { color: #4ade80; } 
+.c-error { color: #f87171; } 
+.c-info { color: #60a5fa; } 
+.c-title { color: #fb7185; font-weight: bold; }

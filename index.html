@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Influencer Network</title>
+    
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Load PyScript to run Python in the browser -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h1>✨ Influencer Network ✨</h1>
+    
+    <div class="menu">
+        <div class="menu-item">1. Add Influencer</div>
+        <div class="menu-item">2. Add Collaboration</div>
+        <div class="menu-item">3. Show Network</div>
+        <div class="menu-item">4. Find Most Popular</div>
+        <div class="menu-item">5. Exit</div>
+    </div>
+
+    <div class="input-area">
+        <input type="text" id="commandInput" placeholder="Enter choice (1-5) or type name..." autocomplete="off">
+        <!-- py-click binds this button to the Python function submit_command -->
+        <button id="submitBtn" py-click="submit_command">Enter</button>
+    </div>
+
+    <div class="output-container" id="consoleOutput">
+        <div class="log-line c-title">      Influencer Network       </div>
+        <div class="log-line c-system">Welcome! Enter your choice:</div>
+    </div>
+</div>
+
+<!-- Load and run your Python file -->
+<script type="py" src="./main.py"></script>
+
+</body>
+</html>
